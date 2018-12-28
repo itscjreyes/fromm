@@ -10,7 +10,16 @@ app.slider = function(){
         slidesToShow: 3,
         dots: true,
         prevArrow: '<a class="slick-prev slick-arrow"><i class="fa fa-angle-left"></i></a>',
-        nextArrow: '<a class="slick-next slick-arrow"><i class="fa fa-angle-right"></i></a>'
+        nextArrow: '<a class="slick-next slick-arrow"><i class="fa fa-angle-right"></i></a>',
+        responsive: [
+            {
+                breakpoint: 950,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false
+                }
+            }
+        ]
     });
 
     $('.testimonialSlider').slick({
