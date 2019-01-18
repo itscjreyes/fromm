@@ -24,8 +24,8 @@ body {
 
 .container {
     position: relative;
-    padding: 6% 8%;
-    max-width: 1400px;
+    padding: 6%;
+    max-width: 1500px;
     margin: auto;
     z-index: 1;
 }
@@ -237,8 +237,161 @@ ul.slick-dots {
     }
 }
 
-/* HOME */
+/* HEADER */
+.topBar {
+    background: $lightGrey;
 
+    .container {
+        padding: 15px 6%;
+        text-align: right;
+    }
+
+    a {
+        margin-left: 10px;
+        
+        &:hover,
+        &:focus {
+            color: $red;
+        }
+    }
+}
+
+.topLogo {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 6%;
+    }
+
+    img {
+        max-width: 200px;
+    }
+}
+
+.topPhone {
+    p {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $fontTitle;
+        font-weight: 700;
+        font-size: 14px;
+        padding-left: 10px;
+        line-height: 1;
+    }
+
+    a {
+        display: block;
+        font-family: $fontTitle;
+        font-size: 18px;
+        font-weight: 700;
+        color: $red;
+        line-height: 1;
+    }
+}
+
+header nav {
+    position: relative;
+    background: $red;
+    z-index: 5;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6%;
+    }
+
+    ul:not(.subMenu){
+        > li {
+            position: relative;
+            display: inline-block;
+            border-bottom: 3px solid $red;
+            margin-right: 20px;
+
+            &:hover {
+                border-bottom: 3px solid white;
+
+                ul.subMenu {
+                    top: calc(100% + 3px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            > a {
+                display: block;
+                padding: 18px 0 15px;
+                color: white;
+                font-size: 14px;
+            }
+
+            &.hasChildren {
+                position: relative;
+                padding-right: 15px;
+                
+                &:after {
+                    position: absolute;
+                    content: "\f107";
+                    font-family: 'FontAwesome';
+                    right: 0;
+                    top: 15px;
+                    color: white;
+                    transition: $transition;
+                }
+
+                &:hover:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    ul.subMenu {
+        position: absolute;
+        background: white;
+        min-width: 200px;
+        top: calc(100% + 30px);
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+        
+        li {
+            list-style: none;
+
+            &:last-child a {
+                border-bottom: 0;
+            }
+
+            a {
+                display: block;
+                font-size: 14px;
+                padding: 15px 10px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                line-height: 1.2;
+
+                &:hover,
+                &:focus {
+                    background: $lightGrey;
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+.navCTA {
+    display: block;
+    background: $darkGrey;
+    color: white;
+    text-transform: uppercase;
+    font-family: $fontTitle;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 18px 25px;
+}
+
+/* HOME */
 .home {
     .banner {
         position: relative;
@@ -258,7 +411,7 @@ ul.slick-dots {
         }
 
         .container {
-            padding: 150px 8%;
+            padding: 150px 6%;
         }
     }
 
@@ -608,7 +761,7 @@ h2.yearsTitle {
     background: linear-gradient(to bottom, $red 50%, white 50%);
     
     .container {
-        padding: 0 8%;
+        padding: 0 6%;
         margin-bottom: 6%;
         max-width: 1200px;
 
