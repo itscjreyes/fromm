@@ -330,17 +330,15 @@ header nav {
                 position: relative;
                 padding-right: 15px;
                 
-                &:after {
+                span {
                     position: absolute;
-                    content: "\f107";
-                    font-family: 'FontAwesome';
                     right: 0;
                     top: 15px;
                     color: white;
                     transition: $transition;
                 }
 
-                &:hover:after {
+                &:hover span {
                     transform: rotate(180deg);
                 }
             }
@@ -389,6 +387,58 @@ header nav {
     font-weight: 500;
     font-size: 14px;
     padding: 18px 25px;
+}
+
+button.mobileToggle {
+    display: none;
+    position: absolute;
+    right: 8%;
+    top: 20px;
+    height: 20px;
+    width: 30px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    z-index: 5;
+
+    span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        background: $black;
+        transition: $transition;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+
+    &.open {
+        span {
+            &:nth-child(1) {
+                top: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                width: 0;
+            }
+
+            &:nth-child(3) {
+                top: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }
 
 /* HOME */
