@@ -10,6 +10,21 @@ app.navigation = function(){
         $(this).append('<span><i class="fa fa-angle-down"></i></span>');
     });
 
+    // Sticky Navigation
+    $(window).scroll(function () {
+        var y = $(document).scrollTop();
+        var topBarHeight = $('.topBar').height() + $('.topLogo').height();
+        var navHeight = $('header nav').height();
+
+        if (y >= topBarHeight) {
+            $('header').addClass('navSticky');
+            $('header.navSticky').css('margin-bottom', navHeight);
+        } else {
+            $('header').removeClass('navSticky');
+            $('header').css('margin-bottom', 0);    
+        }
+    });
+
     // Mobile Navigation
     $('header nav li.hasChildren span').click(function(){
         var allSubMenus = $('ul.subMenu');
