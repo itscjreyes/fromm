@@ -602,6 +602,7 @@ header.navSticky:not(.mobile) {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        overflow: hidden;
 
         &:after {
             position: absolute;
@@ -610,7 +611,7 @@ header.navSticky:not(.mobile) {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.5);
         }
 
         .container {
@@ -620,8 +621,16 @@ header.navSticky:not(.mobile) {
 
     h1 {
         color: white;
-        max-width: 750px;
+        max-width: 775px;
     }
+}
+
+#bannerVideo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .floatingCards {
@@ -682,6 +691,10 @@ header.navSticky:not(.mobile) {
 
 .contentWrapper {
     width: 38%;
+
+    ul, ol {
+        padding-left: 2em;
+    }
 }
 
 .imgLeft {
@@ -762,7 +775,8 @@ h2.yearsTitle {
     img {
         height: 100px;
         width: auto;
-        margin: 2%;
+        margin: 0 2%;
+        filter: brightness(0) invert(1);
     }
 }
 
@@ -827,8 +841,7 @@ h2.yearsTitle {
                 }
 
                 &:after {
-                    opacity: 0;
-                    visibility: hidden;
+                    background: rgba(0,0,0,0.4);
                 }
             }
         }
@@ -871,7 +884,7 @@ h2.yearsTitle {
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(0,0,0,0.4);
+        background: rgba(0,0,0,0.6);
         opacity: 1;
         visibility: visible;
         transition: $transition;
@@ -885,6 +898,22 @@ h2.yearsTitle {
         height: 100%;
         left: 0;
         top: 0;
+    }
+
+    .sectionTitle {
+        color: white;
+        z-index: 1;
+        text-shadow: 0 0 20px rgba(0,0,0,0.5);
+        
+        h3 {
+            font-size: 26px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        &:after {
+            background: linear-gradient(to right, #ff0000 65%, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0) 75%, white 75%);
+        }
     }
 }
 
