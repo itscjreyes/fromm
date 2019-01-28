@@ -382,10 +382,14 @@ ul.slick-dots {
         justify-content: space-between;
         align-items: center;
         padding: 15px 6%;
+
+        > a {
+            line-height: 1;
+        }
     }
 
     img {
-        max-width: 200px;
+        max-width: 220px;
     }
 }
 
@@ -508,6 +512,11 @@ header nav {
     font-weight: 500;
     font-size: 14px;
     padding: 18px 25px;
+
+    &:hover,
+    &:focus {
+        background: #474747;
+    }
 }
 
 button.mobileToggle {
@@ -567,7 +576,13 @@ button.mobileToggle {
     width: 0;
     visibility: hidden;
     opacity: 0;
-    transition: all 1s ease;
+    line-height: 1;
+    transition: all 0.5s ease;
+
+    img {
+        width: 220px;
+        filter: brightness(0) invert(1);
+    }
 }
 
 header.navSticky:not(.mobile) {
@@ -1155,6 +1170,8 @@ footer {
 .footer1 {
     .footerLogo {
         display: block;
+        width: 200px;
+        filter: brightness(0) invert(1);
     }
     
     a.footerTel {
