@@ -3,6 +3,7 @@ const app = {};
 app.init = function(){
     app.navigation();
     app.slider();
+    app.products();
 };
 
 app.navigation = function(){
@@ -83,6 +84,13 @@ app.slider = function(){
         nextArrow: '<a class="slick-next slick-arrow"><i class="fa fa-angle-right"></i></a>',
         adaptiveHeight: true
     })
+};
+
+app.products = function(){
+    $('.prodSingle button').click(function(){
+        $(this).parent().toggleClass('active');
+        $(this).parent().find('.prodBlock').slideToggle();
+    });
 };
 
 $(document).ready(function(){

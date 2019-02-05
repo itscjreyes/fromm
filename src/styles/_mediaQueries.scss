@@ -86,6 +86,37 @@
             }
         }
     }
+
+    .solutionsGrid {
+        .solBlock {
+            width: 50%;
+        }
+    }
+
+    .prodType {
+        img {
+            display: none;
+        }
+
+        .typeContent {
+            width: 100%;
+        }
+    }
+
+    .prodDetails {
+        display: block;
+
+        img,
+        .prodFeatures,
+        .prodBenefits {
+            width: 100%;
+        }
+    }
+
+    .prodFeatures,
+    .prodBenefits {
+        padding: 20px 0;
+    }
 }
 
 @media screen and (max-width: 767px) {
