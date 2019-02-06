@@ -145,6 +145,59 @@
     }
 }
 
+.vidHolder {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+
+    a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition;
+        }
+
+        &:hover,
+        &:focus {
+            &:after {
+                opacity: 1;
+                visibility: visible;
+            }
+            .fa-play {
+                background: $red;
+                color: white;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .fa-play {
+        background: $lightGrey;
+        color: $darkGrey;
+        border-radius: 50%;
+        padding: 20px 20px 22px 25px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        transition: $transition;
+        z-index: 1;
+    }
+}
+
 h2.yearsTitle {
     display: flex;
     justify-content: flex-start;
@@ -535,7 +588,8 @@ h2.yearsTitle {
 
     h2.sectionTitle {
         font-size: 30px;
-        margin-bottom: 30px;
+        max-width: 600px;
+        margin: 0 auto 30px;
     }
 
     h3 {
@@ -551,6 +605,7 @@ h2.yearsTitle {
     
     h1 {
         text-transform: uppercase;
+        max-width: 800px;
         margin: 2% auto;
     }
 
@@ -744,7 +799,7 @@ h2.yearsTitle {
 
 .prodDetails {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 20px;
 
@@ -752,6 +807,7 @@ h2.yearsTitle {
     .prodFeatures,
     .prodBenefits {
         width: calc(100% / 3);
+        height: auto;
     }
 }
 
@@ -766,5 +822,37 @@ h2.yearsTitle {
 
     ul {
         padding-left: 20px;
+    }
+
+    p, li {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+}
+
+.prodTempWrapper {
+    > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.prodSideNav {
+    width: 20%;
+}
+
+.prodModules {
+    width: 75%;
+
+    .container {
+        padding: 4% 0;
+    }
+
+    .greyBG,
+    .darkBG {
+        .container {
+            padding: 6%;
+        }
     }
 }
