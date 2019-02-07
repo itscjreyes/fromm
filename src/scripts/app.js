@@ -2,6 +2,7 @@ const app = {};
 
 app.init = function(){
     app.navigation();
+    app.search();
     app.slider();
     app.products();
 };
@@ -59,6 +60,22 @@ app.navigation = function(){
             $('.topPhone').appendTo('.topLogo .container');
         }
     }).resize();
+};
+
+app.search = function(){
+    $('button.searchToggle').click(function(){
+        $('.hs-search-field__wrapper').addClass('open');
+        $('header.mobile nav').removeClass('open');
+        $('.mobileToggle').removeClass('open');
+    });
+
+    $("body").mouseup(function (e) {
+        var subject = $(".hs-search-field__bar");
+
+        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+            $('.hs-search-field__wrapper').removeClass('open');
+        }
+    });
 };
 
 app.slider = function(){

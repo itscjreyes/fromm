@@ -3,8 +3,10 @@
     background: $lightGrey;
 
     .container {
-        padding: 5px 6%;
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 6%;
     }
 
     a {
@@ -14,6 +16,28 @@
         &:focus {
             color: $red;
         }
+    }
+}
+
+button.searchToggle {
+    background: transparent;
+    border: 0;
+    padding: 8px 15px;
+    margin-right: 30px;
+    color: $darkGrey;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: $fontTitle;
+    outline: none;
+    transition: $transition;
+
+    .fa {
+        margin-right: 5px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $red;
     }
 }
 
@@ -356,13 +380,20 @@ header.mobile nav {
         background: white;
 
         .container {
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         a {
             display: inline-block;
             margin: 10px;
         }
+    }
+
+    button.searchToggle {
+        background: transparent;
+        color: $darkGrey;
+        font-weight: 600;
     }
 
     .topPhone {
