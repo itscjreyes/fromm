@@ -535,6 +535,8 @@ h2.yearsTitle {
     }
 }
 
+/* BLOG */
+
 .postsGroup {
     display: flex;
     justify-content: space-between;
@@ -597,6 +599,8 @@ h2.yearsTitle {
         font-weight: 400;
     }
 }
+
+/* INNER PAGE MODULES */
 
 .innerBanner {
     background: $darkGrey;
@@ -686,6 +690,8 @@ h2.yearsTitle {
         }
     }
 }
+
+/* PRODUCT MODULES */
 
 .solutionsGrid {
     .gridWrapper {
@@ -838,21 +844,102 @@ h2.yearsTitle {
     }
 }
 
-.prodSideNav {
-    width: 20%;
-}
-
 .prodModules {
     width: 75%;
-
+    
+    > span > div:first-child > section > .container {
+        padding-top: 0;
+    }
+    
     .container {
         padding: 4% 0;
     }
-
+    
     .greyBG,
     .darkBG {
         .container {
             padding: 6%;
+        }
+    }
+}
+
+.prodSideNav {
+    width: 20%;
+
+    ul.hs-menu-children-wrapper {
+        display: none;
+        margin-top: 10px;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 5px;
+        line-height: 1.4;
+
+        &.active-branch {
+            > ul.hs-menu-children-wrapper {
+                display: block;
+            }
+        }
+    }
+    
+    a {
+        display: block;
+        padding: 5px 8px;
+        font-family: $fontTitle;
+
+        &:hover,
+        &:focus {
+            color: $red;
+        }
+    }
+
+    .hs-menu-depth-1 {
+        > a {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 5px 0 0;
+        }
+
+        &.active-branch {
+            > a {
+                color: $red;
+            }
+        }
+    }
+
+    .hs-menu-depth-2 {
+        padding-left: 5%;
+        
+        > a {
+            font-size: 16px;
+        }
+
+        &.active-branch {
+            > a {
+                background: $lightGrey;
+            }
+
+            &.active {
+                > a {
+                    color: $red;
+                }
+            }
+        }
+    }
+    
+    .hs-menu-depth-3 {
+        padding-left: 5%;
+
+        > a {
+            font-size: 14px;
+        }
+
+        &.active-branch {
+            > a {
+                color: $red;
+            }
         }
     }
 }
