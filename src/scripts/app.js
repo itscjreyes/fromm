@@ -5,6 +5,8 @@ app.init = function(){
     app.search();
     app.slider();
     app.products();
+    app.readMore();
+    app.changeSize();
 };
 
 app.navigation = function(){
@@ -108,6 +110,59 @@ app.products = function(){
         $(this).parent().toggleClass('active');
         $(this).parent().find('.prodBlock').slideToggle();
     });
+};
+
+app.readMore = function(){
+	$('.readMoreLP').on('click', function(e){
+		e.preventDefault();
+
+		$('.lpContent').slideToggle(250);
+		$('.readMoreLP').toggleClass('show');
+	});
+}
+
+app.changeSize = function(){
+	$('#increaseFont').click(function(e){
+		e.preventDefault();
+		var currentBodySize = parseInt($('.section.post-body p').css('font-size')) + 2;
+		if (currentBodySize<=24){
+			$('.section.post-body p').css('font-size', currentBodySize);
+			$('.section.post-body span').css('font-size', currentBodySize);
+			$('.section.post-body li').css('font-size', currentBodySize);
+			$('.section.post-body h4').css('font-size', currentBodySize);
+		}
+
+		var currentH2Size = parseInt($('.section.post-body h2').css('font-size')) + 2;
+		if (currentH2Size<=28){
+			$('.section.post-body h2').css('font-size', currentH2Size);
+		}
+
+		var currentH3Size = parseInt($('.section.post-body h3').css('font-size')) + 2;
+		if (currentH3Size<=26){
+			$('.section.post-body h3').css('font-size', currentH3Size);
+		}
+	});
+
+	$('#decreaseFont').click(function(e){
+		e.preventDefault();
+		var currentBodySize = parseInt($('.section.post-body p').css('font-size')) - 2;
+		if (currentBodySize>=12){
+			$('.section.post-body p').css('font-size', currentBodySize);
+			$('.section.post-body span').css('font-size', currentBodySize);
+			$('.section.post-body li').css('font-size', currentBodySize);
+			$('.section.post-body h4').css('font-size', currentBodySize);
+		}
+
+		var currentH2Size = parseInt($('.section.post-body h2').css('font-size')) - 2;
+		if (currentH2Size>=16){
+			$('.section.post-body h2').css('font-size', currentH2Size);
+		}
+
+		var currentH3Size = parseInt($('.section.post-body h3').css('font-size')) - 2;
+		if (currentH3Size>=14){
+			$('.section.post-body h3').css('font-size', currentH3Size);
+		}
+	});
 };
 
 $(document).ready(function(){

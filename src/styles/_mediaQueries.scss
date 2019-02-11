@@ -13,7 +13,11 @@
 }
 
 @media screen and (max-width: 1110px){
-    .innerBanner {
+    .innerBanner,
+    .featuredBanner,
+    .topicPageSection,
+    .authorPageSection,
+    .error {
         padding-top: 60px;
     }
 
@@ -139,6 +143,10 @@
     .prodModules {
         width: 100%;
     }
+
+    .siteMap .container>ul>li {
+        width: calc(50% - 20px);
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -255,6 +263,131 @@
         .block {
             width: 100%;
             margin: 10px 0;
+        }
+    }
+
+    .formLeft,
+    .formRight {
+        .container {
+            display: block;
+        }
+
+        .contentWrapper,
+        .formWrapper {
+            width: 100%;
+        }
+
+        .formWrapper {
+            margin-top: 40px;
+        }
+    }
+
+    /* Landing Page */
+	.lpContentSection {
+		.container {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.readMoreLP {
+		display: inline-block;
+	}
+
+	.lpContent {
+		width: 100%;
+		display: none;
+	}
+
+	.lpForm {
+		width: 100%;
+		max-width: 500px;
+    }
+
+    /* Blog */
+    .listingPageContent {
+        .container {
+            display: block;
+        }
+    }
+
+    .listingPostGroup {
+        .postItem {
+            width: 100%;
+        }
+    }
+
+    .blog-section,
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        margin-top: 40px;
+    }
+
+    .featuredBanner {
+        .container {
+            display: block;
+        }
+
+        .featuredImg {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+
+        .bannerWrapper {
+            width: 100%;
+        }
+    }
+
+    .full-blog-section {
+        > .container {
+            padding: 6%;
+        }
+    }
+
+    .about-author-sec {
+        display: block;
+
+        .authorDesc {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .subscribeBanner {
+        form {
+            display: block;
+        }
+
+        .hs_email,
+        .hs_notification_frequency {
+            width: 100%;
+            margin: 10px 0 !important;
+        }
+    }
+
+    .siteMap .container>ul>li {
+        width: calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hs-fieldtype-select {    
+        &:after {
+            right: 25px;
+        }
+    }
+
+    .sidebar {
+        .hs-fieldtype-select {    
+            &:after {
+                right: 15px;
+            }
         }
     }
 }

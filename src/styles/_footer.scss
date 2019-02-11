@@ -27,7 +27,7 @@ footer {
 .footer1 {
     .footerLogo {
         display: block;
-        width: 200px;
+        max-width: 200px;
         filter: brightness(0) invert(1);
     }
     
@@ -47,6 +47,11 @@ footer {
             font-size: 16px;
             margin-right: 10px;
             color: white;
+
+            &:hover,
+            &:focus {
+                color: $red;
+            }
         }
     }
 }
@@ -93,10 +98,29 @@ footer {
             opacity: 0.5;
         }
     }
+
+    a:hover,
+    a:focus {
+        color: $red;
+    }
 }
 
 .footer4 {
     p {
         margin: 20px 0 10px;
+    }
+
+    input[type="submit"] {
+        margin-top: 10px !important;
+    }
+}
+
+.copyright {
+    text-align: center;
+    background: $lightGrey;
+    padding: 10px 8%;
+
+    p, a {
+        color: $black;
     }
 }

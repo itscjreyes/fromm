@@ -245,7 +245,7 @@ button.mobileToggle {
     transition: all 0.5s ease;
 
     img {
-        width: 220px;
+        width: 200px;
         filter: brightness(0) invert(1);
     }
 }
@@ -256,6 +256,10 @@ header.navSticky:not(.mobile) {
         width: 100%;
         left: 0;
         top: 0;
+
+        .container {
+            padding: 0 3%;
+        }
     }
 
     .navCTA {
@@ -369,6 +373,7 @@ header.mobile nav {
         min-width: 0;
         padding-left: 20px;
         box-shadow: none;
+        transition: none;
     }
 
     .navCTA {
