@@ -2,7 +2,7 @@
 .home {
     .banner {
         position: relative;
-        background-image: url('http://www.roha-bremen.com/typo3conf/ext/auw_viewhelper/Resources/Public/Img/placeholder.png');
+        background-image: url('https://cdn2.hubspot.net/hubfs/5045451/Home/banner-image.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -258,7 +258,7 @@ h2.yearsTitle {
     }
 
     img {
-        height: 100px;
+        max-height: 100px;
         width: auto;
         margin: 0 2%;
         filter: brightness(0) invert(1);
@@ -291,9 +291,10 @@ h2.yearsTitle {
     }
 
     img {
+        display: block;
         max-height: 200px;
         width: auto;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
     }
 
     h3 {
@@ -651,6 +652,10 @@ h2.yearsTitle {
     p {
         padding-bottom: 20px;
     }
+
+    .sectionTitle {
+        max-width: 500px;
+    }
 }
 
 .blockGrid {
@@ -687,6 +692,10 @@ h2.yearsTitle {
         padding: 4%;
         
         &.blockHover {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
             transition: all 0.2s ease;
 
             &:hover {
@@ -727,6 +736,7 @@ h2.yearsTitle {
     .solBlock {
         width: calc(100% / 3);
         padding: 10px;
+        text-align: center;
         transition: $transition;
 
         &:hover,
@@ -743,9 +753,9 @@ h2.yearsTitle {
     .solImg {
         background-size: cover;
         background-position: center;
-        width: 100%;
+        width: 90%;
         height: 200px;
-        margin-bottom: 10px;
+        margin: 0 auto 10px;
     }
 }
 
@@ -967,6 +977,22 @@ h2.yearsTitle {
     }
 }
 
+.titleLeft {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .sectionTitle {
+        width: 25%;
+    }
+
+    .contentWrapper {
+        width: 70%;
+    }
+}
+
 /* LANDING PAGE */
 
 .landingPage {
@@ -976,7 +1002,7 @@ h2.yearsTitle {
         box-shadow: none;
 
 		.container {
-			padding: 20px 8% 0;
+			padding: 20px 6% 0;
 		}
 	}
 }
@@ -1119,4 +1145,11 @@ h2.yearsTitle {
     a:focus {
         color: $red;
     }
+}
+
+.emailBlock {
+    padding: 6%; 
+    max-width: 1500px; 
+    margin: auto  !important; 
+    float: none !important;
 }

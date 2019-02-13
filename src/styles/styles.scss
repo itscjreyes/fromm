@@ -242,6 +242,27 @@ a {
     }
 }
 
+.btnLeft,
+.btnCenter,
+.btnRight {
+    .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+.btnLeft {
+    text-align: left;
+}
+
+.btnCenter {
+    text-align: center;
+}
+
+.btnRight {
+    text-align: right;
+}
+
 /* Forms */
 
 .hs-form-required {

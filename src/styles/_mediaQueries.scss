@@ -21,6 +21,10 @@
         padding-top: 60px;
     }
 
+    .emailBlock {
+        padding-top: calc(6% + 60px);
+    }
+
     .blockGridWrapper {
         .block {
             h3 {
@@ -84,6 +88,17 @@
         width: 100%;
     }
 
+    .titleLeft {
+        .container {
+            display: block;
+        }
+
+        .sectionTitle,
+        .contentWrapper {
+            width: 100%;
+        }
+    }
+
     .industrySlider {
         .slick-arrow,
         .slick-arrow:hover,
@@ -135,13 +150,17 @@
 
     .prodTempWrapper {
         > .container {
-            display: block;
+            flex-direction: column-reverse;
         }
     }
 
     .prodSideNav,
     .prodModules {
         width: 100%;
+    }
+
+    .prodSideNav {
+        margin-top: 40px;
     }
 
     .siteMap .container>ul>li {
@@ -152,6 +171,13 @@
 @media screen and (max-width: 767px) {
     h1 {
         font-size: 40px;
+    }
+
+    .lpBanner,
+    .innerBanner {
+        h1 {
+            font-size: 30px;
+        }
     }
 
     .banner {
@@ -279,6 +305,17 @@
 
         .formWrapper {
             margin-top: 40px;
+        }
+    }
+
+    .solutionsGrid {
+        .solImg {
+            width: 100%;
+            height: 100px;
+        }
+
+        h3 {
+            font-size: 16px;
         }
     }
 
