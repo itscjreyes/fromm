@@ -8,7 +8,11 @@
     }
 
     .featuredImg {
-        width: 50%;
+		width: 50%;
+		
+		img {
+			width: 100%;
+		}
     }
 
     .bannerWrapper {

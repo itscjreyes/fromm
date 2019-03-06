@@ -1,28 +1,26 @@
 /* HOME */
-.home {
-    .banner {
-        position: relative;
-        background-image: url('https://cdn2.hubspot.net/hubfs/5045451/Home/banner-image.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
+.homeBanner {
+    position: relative;
+    background-image: url('https://cdn2.hubspot.net/hubfs/5045451/Home/video-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 
-        &:after {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-
-        .container {
-            padding: 150px 6%;
-        }
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
     }
 
+    .container {
+        padding: 150px 6%;
+    }
+    
     h1 {
         color: white;
         max-width: 775px;
@@ -701,6 +699,10 @@ h2.yearsTitle {
             &:hover {
                 box-shadow: 0 5px 20px rgba(0,0,0,0.2);
                 transform: translateY(-5px);
+            }
+
+            p {
+                width: 100%;
             }
         }
 

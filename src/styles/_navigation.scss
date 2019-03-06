@@ -250,6 +250,12 @@ button.mobileToggle {
     }
 }
 
+header:not(.mobile) {
+    ul:not(.subMenu) {
+        width: calc(100% - 150px);
+    }
+}
+
 header.navSticky:not(.mobile) {
     nav {
         position: fixed;
@@ -271,6 +277,10 @@ header.navSticky:not(.mobile) {
         width: auto;
         visibility: visible;
         opacity: 1;
+    }
+
+    ul:not(.subMenu) {
+        width: auto;
     }
 }
 
