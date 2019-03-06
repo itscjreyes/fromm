@@ -253,12 +253,13 @@ h2.yearsTitle {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        padding: 4% 6%;
     }
 
     img {
-        max-height: 100px;
+        max-height: 70px;
         width: auto;
-        margin: 0 2%;
+        margin: 20px 2%;
         filter: brightness(0) invert(1);
     }
 }
